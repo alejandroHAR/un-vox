@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UNVOX</title>
+  <meta name="theme-color" content="#003366">
+  <meta name="description" content="¿Cansado de que el antro se caiga a pedazos? Entra a UNVOX y crea un vox rápidamente." />
+  <meta property="og:title" content="UNVOX" />
+  <meta property="og:description" content="¿Cansado de que el antro se caiga a pedazos? Entra a UNVOX y crea un vox rápidamente." />
+  <meta property="og:image" content="logo-vox.ico" />
+  <meta property="og:url" content="https://un-vox.web.app" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="logo-vox.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <span>UNVOX</span>
+    </nav>
+    <div class="image-placeholder" id="image-placeholder">
+      <span class="badge badge-blue" id="badge-blue">CAT</span>
+      <span class="badge badge-green" id="badge-green">Nuevo</span>
+      <div class="image-text" id="image-text"></div>
+    </div>
+    <div class="form-group">
+      <label for="image-text-input">Texto</label>
+      <input type="text" id="image-text-input" placeholder="Ingrese texto">
+    </div>
+    <div class="form-group">
+      <input type="file" id="choose-image">
+    </div>
+    <div class="form-group">
+      <label for="category">Categoría</label>
+      <div style="display: flex;">
+        <input type="text" id="category" placeholder="CAT">
+        <button class="btn-dialog" id="open-dialog">Seleccionar</button>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="checkbox">
+        <input type="checkbox" id="is-new">
+        <label for="is-new">Nuevo Vox</label>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: space-between;">
+      <button class="btn" id="download-button">Descargar</button>
+      <button class="btn" id="new-button">LIMPIAR</button>
+    </div>
+  </div>
+
+  <div id="dialog" class="dialog">
+    <div class="dialog-content">
+      <span class="close" id="close-dialog">&times;</span>
+      <p>Selecciona una categoría:</p>
+      <div id="dialog-categories"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <div style="text-align: center; color: #ffffff; margin: 40px auto;">
+    <p>v1.1.7 (29)</p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</body>
+</html>
